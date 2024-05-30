@@ -9,6 +9,7 @@ function App() {
   useEffect(() => {
     const getArticles = async () => {
       try {
+        setError(false);
         setIsLoading(true);
         const data = await getArticlesApi();
         setArticles(data);
